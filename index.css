@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --color-1: #000000;
+    --color-2: #614918;
+    --color-3: #000000;
+    --color-contrast: #F7F7A6;
+    --color-contast-purple: #FF007F;
+    --color-bd-text: #f5f5dc;
+    
+  
+
+    --font-default: "Poppins", sans-serif;
+  
+    --shadow:   
+        0 0px 15px 0 rgba(0, 0, 0, 0.384),
+        0 2px 10px 0 rgba(0, 0, 0, 0.486); 
+  } 
+
+/* globais */
+body{
+    background-image: linear-gradient(to bottom, var(--color-1), var(--color-2), var(--color-3), var(--color-1), var(--color-2), var(--color-1));
+    color: white;
+    font-family: var(--font-default);
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header-ul{
+    display: flex;
+    list-style: none;
+}
+.header-ul a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid black;
+}
+.header-ul a:hover{
+    transition: .9s;
+    border-bottom: 1px solid var(--color-contast-purple);
+}
+
+.curriculo-link{
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 1.4em;
+    position: relative;
+    margin: 50px auto;
+}
+#initial-page-icon{
+    align-self: flex-end;
+}
+.scroll-icon{
+    transition: transform 1s ease-in;
+    animation: pulse-animation 1s infinite;
+}
+
+.download-icon{
+    transition: transform 0.3s ease;
+    animation: pulse-animation 1s infinite;
+}
+.curriculo-link{
+    border: 1px solid var(--color-contast-purple);
+    border-radius: 20px;
+}
+
+#my-name{
+    font-size: 3em;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: translateY(-15px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+}
+
+.header-ul li{
+    padding: 30px;
+}
+
+.title{
+    font-size: 2em;
+}
+.intro-container{
+    min-height: calc(110dvh - 90px);
+    justify-content: space-evenly;
+}
+section{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    min-height: 100dvh;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+.section-title{
+    font-size: 3.5em;
+}
+#section-project .job-card-container:nth-child(odd),
+#section-project .job-card-container:nth-child(even) {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1s;
+}
+#section-project .job-card-container:nth-child(odd) {
+    transform: translateX(-100%);
+}
+#section-project .job-card-container:nth-child(even) {
+    transform: translateX(100%);
+}
+
+#section-project .job-card-container:nth-child(odd).show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+#section-project .job-card-container:nth-child(even).show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+
+
+
+/* my infos */
+#name{
+    font-size: 3em;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.my-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.right-container{
+    display: flex;
+    justify-content: center;
+}
+.my-infos-container{    
+    display: flex;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.title-main{
+    display: flex;
+    width: 50%;
+    text-align: end;
+    text-align: end;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.my-description{
+    display: flex;
+    width: auto;
+    flex-direction: column;
+
+}
+
+
+.my-stacks{
+    font-size: .9em;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+
+}
+
+.my-picutre-container{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.my-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+  
+}
+.profile-img{   
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+
+/* sobre */
+
+#about-section{
+    flex-wrap: wrap;
+}
+
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title{
+    width: 100%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.minha-jornada span{
+    color: var(--color-contrast);
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+
+.minha-habilidades{
+    text-indent: 50px;
+}
+.more{
+    width: 70%;
+    margin-bottom: 100px;
+}
+.my-text{
+    font-size: 1.1em;
+}
+
+/* stacks */
+.grid-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stacks-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    align-items: center;
+}   
+.card {
+    border-radius: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border: 1px solid var(--color-2);
+}
+.stack-ttile{
+    color: var(--color-contrast);
+}
+.card-ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+.card-ul li{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    justify-items: start;
+    max-width: 158px;
+
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    margin: 10px 0 0;
+}
+
+.icons-svg{
+    padding: 8px;
+    width: 50px;
+    height: 50px;
+}
+
+
+/* projetos */
+#section-project{
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.job-card-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 200px;
+}
+
+.job-card{
+    display: flex;
+    width: auto; 
+    max-width: 1500px; 
+    border-radius: 8px;
+    overflow: hidden;
+}
+.job-img-container{
+    flex: 0 0 60%; 
+    overflow: hidden;
+}
+.card-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.job-description{
+    color: white;
+    padding: 20px;
+}
+.job-title{
+    color: var(--color-contrast);
+    font-size: 2.5em;
+}
+.job-tecs span{
+    color: var(--color-contast-purple);
+    font-weight: 800;
+    font-size: 1.1em;
+}
+.deploy-link{
+    color: var(--color-contrast);
+    text-decoration: none;
+}
+
+
+/* contact */
+
+.contact-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    min-height: 0px;
+    align-items: center;
+}
+.contact-list{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+
+}
+.contact-list li{
+    font-style: italic;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 260px;
+    padding: 20px;
+}
+.contact-list li a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    section{
+        flex-wrap: wrap;
+    }
+    .my-infos-container, .my-description{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .my-infos-container p{
+        width: 100%;
+        text-align: center;
+
+    }
+    .header-ul li{
+        padding: 10px;
+    }
+    .header-ul{
+        padding: 0px;
+    }
+}
+@media (max-width: 1000px) {
+    .job-card{
+        flex-wrap: wrap;
+
+    }
+    .job-img-container{
+        flex: 0 0 100%;
+    }
+}
