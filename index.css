@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-    --color-1: #000000;
-    --color-2: #614918;
-    --color-3: #000000;
+    --color-1: #221F1F;
+    --color-2: #221F1F;
+    --color-3: #221F1F;
     --color-contrast: #F7F7A6;
     --color-contast-purple: #FF007F;
     --color-bd-text: #f5f5dc;
@@ -34,13 +34,10 @@ header{
 .header-ul a{
     text-decoration: none;
     color: white;
-    border: 1px solid black;
 }
 .header-ul a:hover{
-    transition: .9s;
-    border-bottom: 1px solid var(--color-contast-purple);
+    border-bottom: 2px solid var(--color-contrast);
 }
-
 .curriculo-link{
     padding: 20px;
     color: white;
@@ -53,15 +50,21 @@ header{
 }
 #initial-page-icon{
     align-self: flex-end;
+    width: 98%;
 }
 .scroll-icon{
     transition: transform 1s ease-in;
     animation: pulse-animation 1s infinite;
+    color: #F7F7A6;
 }
 
 .download-icon{
     transition: transform 0.3s ease;
     animation: pulse-animation 1s infinite;
+}
+#python-icon{
+    width: 100%;
+    height: 100px
 }
 .curriculo-link{
     border: 1px solid var(--color-contast-purple);
@@ -69,7 +72,7 @@ header{
 }
 
 #my-name{
-    font-size: 3em;
+    font-size: 2em;
 }
 
 @keyframes pulse-animation {
@@ -91,22 +94,34 @@ header{
 .title{
     font-size: 2em;
 }
-.intro-container{
-    min-height: calc(110dvh - 90px);
-    justify-content: space-evenly;
+#intro-container{
+    min-height: calc(90dvh - 90px);
+    margin-top: 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 section{
     padding: 50px;
     display: flex;
     align-items: center;
     min-height: 100dvh;
-    margin-top: 100px;
     justify-content: center;
 }
 
 .section-title{
     font-size: 3.5em;
+    color: var(--color-contrast);
 }
+.title-line{
+    display: inline-block; 
+    width: 100px; 
+    height: 2px; 
+    width: 70%;
+    background-color: var(--color-contrast); 
+    margin-left: 10px; 
+}
+
 #section-project .job-card-container:nth-child(odd),
 #section-project .job-card-container:nth-child(even) {
     opacity: 0;
@@ -153,10 +168,22 @@ section{
 
 /* my infos */
 #name{
-    font-size: 3em;
-    padding: 0px;
+    font-size: .9em;
     margin: 0px;
-    text-align: left;
+    padding: 0px;
+    text-align: center;
+}
+
+.my-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+}
+.arrow-container{
+    width: 100%;
+    margin-top: 50px;
 }
 
 .my-info{
@@ -175,7 +202,7 @@ section{
     font-size: 1.1em;
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 50vw;
 }
 .title-main{
     display: flex;
@@ -195,10 +222,11 @@ section{
 
 
 .my-stacks{
-    font-size: .9em;
-    margin: 0px;
+    font-size: 3em;
     padding: 0px;
-    text-align: center;
+    margin: 0px;
+    text-align: left;
+    color: var(--color-contrast);
 
 }
 
@@ -213,10 +241,9 @@ section{
 .my-picture{
     display: flex;
     justify-content: center;
+    width: 30vw;
+    border-radius: 20px;
     align-items: center;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
     overflow: hidden;
   
 }
@@ -295,7 +322,7 @@ section{
     padding: 20px;
     text-align: center;
     color: white;
-    border: 1px solid var(--color-2);
+    border: 1px solid var(--color-bd-text);
 }
 
 .stack-ttile{
@@ -372,6 +399,10 @@ section{
     flex: 0 0 60%; 
     overflow: hidden;
     max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .card-image{
     width: 100%;
@@ -453,8 +484,10 @@ section{
     display: flex;
     list-style: none;
     align-items: center;
-    justify-content: start;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
 
 }
 .contact-list li{
@@ -466,6 +499,10 @@ section{
     width: 260px;
     padding: 20px;
 }
+.contact-list a:hover{
+    border-bottom: solid 1px var(--color-contrast);
+}
+
 .contact-list li a{
     text-decoration: none;
     color: white;
@@ -474,6 +511,7 @@ section{
 @media (max-width: 768px) {
     section{
         flex-wrap: wrap;
+        padding: 0px;
     }
     .my-infos-container, .my-description{
         width: 100%;
@@ -485,11 +523,25 @@ section{
 
     }
     .header-ul li{
-        padding: 10px;
+        padding: 15px;
     }
     .header-ul{
         padding: 0px;
     }
+    .my-picutre-container{
+        width: 100%;
+    }
+    .my-stacks{
+        font-size: 2.5em;
+    }
+    #sobre-link{
+        display: none;
+    }
+    #my-picutre-container{
+        width: 100%;
+    }
+
+
 }
 @media (max-width: 1000px) {
     .job-card{
@@ -502,5 +554,31 @@ section{
     .card-more-info{
         width: 100%;
         position: sticky;
+    }
+    .stacks-container{
+        max-width: auto;
+        padding: 0px;
+    }
+    .my-picutre-container{
+        width: 50%;
+    }
+    .my-picture{
+        width: auto;
+    }
+    .title-main{
+        width: 100%;
+    }
+ 
+    .card-more-info{
+        display: none;
+    }
+
+
+}
+
+
+@media (max-width: 1200px) {
+    .card-image{
+        height: 100%;
     }
 }
