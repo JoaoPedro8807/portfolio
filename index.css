@@ -372,7 +372,7 @@ section{
 .curriculo-container{
     width: 200px;
     border-radius: 20px;
-    border: .5px solid white;
+    border: .5px solid var(--color-contrast);
 }
 .curriculo-wrapper{
     width: 100%;
@@ -385,6 +385,7 @@ section{
 .download-card-icon{
     width: 20px;
     height: 20px;
+    color: var(--color-contrast);
 }
 .button {
     margin: 0px;
