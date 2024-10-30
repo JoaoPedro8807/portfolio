@@ -8,7 +8,7 @@ const observer = new IntersectionObserver( props =>{
             if(!prop.target.classList.contains('intro-container')){
                 prop.target.classList.remove('show')
             }
-        }
+        }   
     } )
 } ) 
 
