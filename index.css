@@ -17,6 +17,12 @@
   } 
 
 /* globais */
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 body{
     background-image: linear-gradient(to bottom, var(--color-1), var(--color-2), var(--color-3), var(--color-1), var(--color-2), var(--color-1));
     color: white;
@@ -259,6 +265,8 @@ section{
 
 #about-section{
     flex-wrap: wrap;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .about-container{
@@ -277,8 +285,11 @@ section{
     width: 100%;
     text-align: start;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    height: 100%;
+    
 }
 
 .minha-jornada span{
@@ -543,7 +554,37 @@ section{
 }
 
 
-/* contact */
+/* contact, footer */
+footer{
+    background-image: linear-gradient(to bottom, var(--color-1), black, black)
+}
+
+
+#footer-section{
+    padding: 0px;
+    margin: 0px;
+    min-height: 90dvh;
+}
+.icons-contact{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+
+.more-container{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+.more-title{
+    width: 100%;
+    font-size: 3.5em;
+}
+
+.more-contact, .more-text{
+    display: flex;
+    align-items: center;
+}
 
 .contact-section{
     display: flex;
@@ -599,6 +640,7 @@ section{
     }
     .header-ul{
         padding: 0px;
+        overflow: hidden;
     }
     .my-picutre-container{
         width: 100%;
@@ -612,7 +654,9 @@ section{
     #my-picutre-container{
         width: 100%;
     }
-
+    .more-container{
+        flex-wrap: wrap;
+    }
 
 }
 @media (max-width: 1000px) {
